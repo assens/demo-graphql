@@ -1,0 +1,24 @@
+type Query {
+  persons: [Person]
+}
+
+type Mutation {
+  uploadFile(file: Upload!): FileUpload
+}
+
+scalar BigDecimal
+scalar LocalDate
+scalar LocalDateTime
+scalar Long
+
+type Person {
+  firstName: String
+  lastName: String
+  weight: BigDecimal
+  birthday: LocalDate
+}
+
+type FileUpload {
+  fileName: String
+  size: Long
+}
