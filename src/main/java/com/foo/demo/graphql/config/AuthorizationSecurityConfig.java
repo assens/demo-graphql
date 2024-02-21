@@ -15,7 +15,6 @@ public class AuthorizationSecurityConfig {
     http.authorizeHttpRequests(auth -> auth
         .requestMatchers("/actuator/**").permitAll()
         .requestMatchers("/graphiql/**").permitAll()
-        .requestMatchers("/graphql/**").permitAll()
         .requestMatchers("/**").authenticated()
         );
     return http.build();
