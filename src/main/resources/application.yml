@@ -1,4 +1,9 @@
 spring:
+  cloud:
+    azure:
+      active-directory:
+        enabled: true
+        app-id-uri: api://${spring.cloud.azure.active-directory.credential.client-id}
   graphql:
     graphiql:
       enabled: true

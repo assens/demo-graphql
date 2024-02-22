@@ -22,7 +22,7 @@ public class PersonGraphQLContrller {
   private final PersonService personService;
 
   @GetMapping
-  @PreAuthorize("hasAuthority('ADMIN')")
+  @PreAuthorize("hasAnyAuthority('ADMIN', 'TEST', 'APPROLE_e2478b77-25af-4f72-bd33-5d79fdb575cb')")
   @QueryMapping
   public Collection<Person> persons(final Authentication authentication) {
     log.info("{}", authentication);
