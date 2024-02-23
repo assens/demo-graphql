@@ -3,12 +3,14 @@ spring:
     azure:
       active-directory:
         enabled: true
-        app-id-uri: api://${spring.cloud.azure.active-directory.credential.client-id}
+        credential:
+          client-id: 8749bead-2f85-457d-93b7-de53d5f2dd55
+        app-id-uri: api://8749bead-2f85-457d-93b7-de53d5f2dd55 
       keyvault:
-        enabled: false
-#        secret:
-#          property-sources[0]:
-#            endpoint: https://csm-ms-main-dev.vault.azure.net
+        enabled: true
+        secret:
+          property-sources[0]:
+            endpoint: https://csm-ms-main-dev.vault.azure.net
   graphql:
     graphiql:
       enabled: true

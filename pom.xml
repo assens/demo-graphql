@@ -65,7 +65,7 @@
     <dependency>
       <groupId>name.nkonev.multipart-spring-graphql</groupId>
       <artifactId>multipart-spring-graphql</artifactId>
-      <version>1.2.1-SNAPSHOT</version>
+      <version>1.2.1</version>
     </dependency>
 
     <dependency>
